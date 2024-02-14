@@ -1,9 +1,10 @@
 {
-  "name": "swigy",
+  "name": "swiggy",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
