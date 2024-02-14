@@ -1,36 +1,38 @@
-const mongoose=require("mongoose")
-const restaurantsSchema=new mongoose.Schema({
-    areaName:{
-        type:String
-    },
-    avgRating:{
-        type:Number
-    },
-    costForTwo:{
-        type:String
-    },
-    cuisines:{
-        type:Array
-    },
-    name:{
-        type:String
-    }
-},{versionKey:false})
-const Restaurant=mongoose.model("restaurantList",restaurantsSchema)
+const mongoose = require('mongoose')
 
-const userSchema=new mongoose.Schema({
-    userName:{
-        type:String
+const restaurantsSchema = new mongoose.Schema({
+    areaName : {
+        type : String
     },
-    contact:{
-        type:Number
+    avgRating : {
+        type : Number
     },
-    email:{
-        type:String
+    costForTwo : {
+        type : String
     },
-    passWord:{
-        type:String
-    }
-},{versionKey:false})
-const User=mongoose.model("userContent",userSchema)
-module.exports={Restaurant, User}
+    cuisines : {
+        type : Array
+    },
+    name : {
+        type : String
+    }  
+})
+const Restaurant = mongoose.model('restaurantList', restaurantsSchema)
+
+const userSchema = new mongoose.Schema({
+    contact : {
+        type : String
+    },
+    email : {
+        type : String
+    },
+    password : {
+        type : String
+    },
+    userName : {
+        type : String
+    },
+})
+const Users = mongoose.model('userDetail', userSchema)
+
+module.exports = {Restaurant, Users}
